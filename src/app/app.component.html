@@ -1,0 +1,72 @@
+<!--********************************************************Header********************************************************-->
+<nav style="position: sticky;top: 0;z-index: 999;">
+    <div class="navbar-header" style="display: flex;justify-content: end;align-items: center;background-color: #FBFFFF;padding-right: 10vw;">
+      <img src="../assets/img/SciLogo.png" style="height: 140px;">
+      <div>
+        <h3>Science Alumni Club</h3>
+        <p>Maejo University</p>
+      </div>
+    </div>
+    <div style="display: flex;justify-content: center;align-items: center;">
+      <ul class="nav navbar-nav" [hidden]="!displayAdmin">
+        <li><a [routerLink]="['home']">หน้าหลัก</a></li>
+        <li><a [routerLink]="['home']">ข่าวสาร</a></li>
+        <li><a [routerLink]="['notable-alumni']">ข้อมูลศิษย์เก่า</a></li>
+        <li><a [routerLink]="['home']">ของรางวัล</a></li>
+        <li><a [routerLink]="['project']">บริจาคทุนการศึกษา</a></li>
+        <li><a (click)="openAdmin()">เข้าสู่ระบบ</a></li>
+      </ul>
+      <ul class="nav navbar-nav" [hidden]="displayAdmin">
+        <li><a (click)="closeAdmin()">Close Admin</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+
+<!--********************************************************Header********************************************************-->
+<!--div class="container" style="padding-top: 60px;margin-top: 0px;width: 70%;">
+  <div class="page-header"-->
+    <router-outlet></router-outlet>
+  <!--/div>
+</div-->
+<div style="background-color: #fc6f48;color: #FBFFFF;">
+  <div style="height: 70px;padding-top: 18px;height: 40vh;flex-wrap: nowrap;display: flex;font-size: 24px;">
+    <div style="display: inline-block;padding: 10px;width: 20%;">
+      <p class="text-muted" style="color: #FBFFFF;">เกี่ยวกับ</p>
+      <div class="card"></div>
+      <img alt="" src="../assets/img/logo_sci.png">
+    </div>
+    <div style="display: inline-block;padding: 10px;width: 40%;">
+      <p class="text-muted" style="color: #FBFFFF;">ช่องทางติดต่อ</p>
+      <div class="card"></div>
+      <div style="height: 250px;display: grid;align-items: center;">
+        <div>
+          <a href="https://goo.gl/maps/KgZHwnB4sP9pc4qb7" target="_blank" style="display: flex;columns: 2;align-items: center;">
+            <i class="fa fa-map-marker" style="font-size:36px;color:ghostwhite;border-radius: 50%;border: 2px solid #525252;padding: 10px;background-color: #5B5A5A;aspect-ratio : 1 / 1;text-align: center;"></i>
+            <p>&nbsp;คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>&nbsp;63 หมู่ 4 ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290</p>
+          </a>
+        </div>
+        <div>
+          <i class="fa fa-phone" style="font-size:36px;color:ghostwhite;border-radius: 50%;border: 2px solid #525252;padding: 10px;background-color: #5B5A5A;aspect-ratio : 1 / 1;text-align: center;"></i> 
+          โทรศัพท์ 053-878802 , 053873803
+        </div>
+        <div>
+          <i class="fa fa-fax" style="font-size:36px;color:ghostwhite;border-radius: 50%;border: 2px solid #525252;padding: 10px;background-color: #5B5A5A;"></i> 
+          แฟกซ์ 053-873827
+        </div>
+      </div>
+    </div>
+    <div style="display: inline-block;padding: 10px;width: 40%;">
+      <p class="text-muted" style="color: #FBFFFF;">สอบถาม</p>
+      <div class="card"></div>
+      <a href="https://www.facebook.com/groups/999648090074595/" target="_blank"><i class="fa fa-facebook" style="font-size:36px;color:ghostwhite;border-radius: 15%;border: 2px solid #525252;
+        padding: 10px;background-color: #5B5A5A;aspect-ratio : 1 / 1;text-align: center;"></i>
+        ศิษย์เก่าคณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้</a>
+    </div>
+  </div>
+  <div style="text-align: center;height: 50px;background-color: #414141;padding-top: 16px;">
+      Copyright &copy; 2015 <span style="color: #fe9805;">Science Maejo University</span> Alumni Club. All rights reserved
+  </div>
+
+</div>

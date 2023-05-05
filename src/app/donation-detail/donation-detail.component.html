@@ -1,0 +1,19 @@
+<div style="display: grid;place-items: center;">
+    <div>หลักฐานการโอน</div>
+	<div>
+        <img src="img/<%= donation.getDonationIMG()%>" style="width:320px;height: 400px;">
+    </div>
+    <div>จำนวนเงิน : 100</div>
+    <div>เลขที่บัตรประชาชน/เลขที่ผู้เสียภาษี : 1234567890123</div>
+    <div>ออกใบเสร็จในนาม : puttipong chomchit</div>
+    <div>วัตถุประสงค์การโอนเงิน : ทุนการศึกษาสำหรับนักศึกษา</div>
+    <div>ที่อยู่ในการจัดส่งใบเสร็จ : รับเองที่ สำนักงานคณบดี คณะวิทยาศาสตร์</div>
+    <div>ชื่อ-นามสกุล : puttipong chomchit</div>
+	<div>เบอร์โทรติดต่อ : 095-xxx-xxxx</div>
+	<div>Email : xxx@gmail.com</div>
+	<div>ที่อยู่ : เลขที่ 123 หมู่ 9, ซอย 9, ต.ต้นเปาอำเภอสันกำแพง, จังหวัดเชียงใหม่, 50130</div>
+    <div>
+        <a href="AcceptDoantionServlet?donationID=<%= donationID%>&projectID=<%= projectID%>&year=<%= year%>&project_detailID=<%= project_detailID%>" onclick="return confirm('กรุณากดอีกครั้งเพื่อยืนยันข้อมูล ? ');"><button>ยอมรับข้อมูล</button></a>
+        <a href="RejectDonationServlet?donationID=<%= donationID%>&projectID=<%= projectID%>&year=<%= year%>&project_detailID=<%= project_detailID%>" onclick="return confirm('กรุณากดอีกครั้งเพื่อการยืนยัน ? ');"><button>ปฏิเสธข้อมูล</button></a>
+    </div>
+</div>

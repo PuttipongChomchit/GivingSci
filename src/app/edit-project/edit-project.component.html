@@ -1,0 +1,57 @@
+<form action="EditProjectServlet" name="frm" method="post" id="frm" enctype="multipart/form-data">
+    <div class="container" style="z-index : 1">
+        <div>ชื่อโครงการ<input type="text" name="title" value="" style="width: 100%;">
+        </div>
+            <div id="listIMG" class="w3-display-container">
+                <input type="hidden" name="" value="">
+                <img class="mySlides" style="width:100%;max-height:500px;height: 500px" src="img/<%= pp.getProject_picture()%>">
+                <button type="button" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                  <button type="button" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+                
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  x[slideIndex-1].style.display = "block";
+                }
+            </script>
+            <div>รูปภาพประกอบ<br>
+                <input type="file" name="file<%= i%>" accept="image/png, image/jpeg" onChange="addPicture(this.id)" id="file<%= i%>" value="<%= pp.getProject_picture()%>"><br>
+                <div id="container"></div>
+            </div>
+        <div>รายละเอียดโครงการ
+        <textarea oninput="auto_grow(this)" id="text" name="project_detail" style="font-size: clamp(16px,2.5vw,22px);font-family: 'Kanit', sans-serif;width:100%;resize: none;overflow: hidden;"><%= projectDetail.getProject_detail()%></textarea>
+            <script type="text/javascript">
+            text.onfocus = function() {
+                text.style.height = "5px";
+                text.style.height = (text.scrollHeight)+"px";
+            }
+            function auto_grow(element) {
+                element.style.height = "5px";
+                element.style.height = (element.scrollHeight)+"px";
+                this.pos = 0;
+                this.element = element;
+            }
+            </script>
+        </div>
+        <div>
+        <span style="width:20%;">วันที่เริ่มต้นโครงการ : </span><input type="date" name="startDate" value="<%= startDate%>" data-date-format="DD MMMM YYYY" id="datepicker1"><span style="width:20%;margin-left: 10%;">เวลาเริ่มต้นโครงการ : </span><input type="time" name="startTime" value="<%=startTime%>"><br>
+        <span style="width:20%;">วันที่สิ้นสุดโครงการ : </span><input type="date" name="endDate" value="<%= endDate%>" data-date-format="DD MMMM YYYY" id="datepicker2"><span style="width:20%;margin-left: 10%;">เวลาสิ้นสุดโครงการ : </span><input type="time" name="endTime" value="<%=endTime%>"><br>
+        </div>
+        <div>
+            <input type="submit" value="ยืนยัน">
+            <input type="button" value="ยกเลิก">
+        </div>
+    </div>
+</form>

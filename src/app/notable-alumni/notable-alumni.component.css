@@ -1,0 +1,26 @@
+.card { 
+    width: auto; 
+    height: 2px; 
+    background: #0ffac7;
+    position: relative; 
+    overflow: hidden; 
+}
+.card::before { 
+    content: '';
+    position: absolute;
+    width: 100%; 
+    background-image: linear-gradient(to right, rgb(0, 0, 0,0) , rgb(211, 49, 170)); 
+    height: 100%;
+    animation: rotBGimg 2s linear infinite; 
+    transition: all .2s linear; 
+} 
+@keyframes rotBGimg { 
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+.card::after { 
+    content:""; 
+    position: absolute; 
+    background: rgb(0, 0, 0,0); 
+    inset: 5px;
+}

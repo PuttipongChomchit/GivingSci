@@ -1,0 +1,39 @@
+  <form action="AddProjectServlet" name="frm" method="post" id="frm" enctype="multipart/form-data">
+  <div class="container" style="z-index : 1">
+      <div>ชื่อโครงการ<br>
+      <h1><input type="text" name="title" style="font-family: 'Kanit', sans-serif;"></h1>
+      </div>
+          <div id="listIMG" class="w3-display-container">
+              <img class="mySlides" style="width:100%;max-height:500px;height: 500px">
+              <img class="mySlides" style="width:100%;max-height:500px;height: 500px">
+              <button type="button" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button type="button" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          <div>รูปภาพประกอบ<br>
+              <input type="hidden" name="part_length" value="0">
+              <input type="file" name="file1" accept="image/png, image/jpeg" onChange="addPicture(this.id)" id="file1"><br>
+              <input type="file" name="file2" accept="image/png, image/jpeg" onChange="addPicture(this.id)" id="file2"><br>
+              <div id="container"></div>
+          </div>
+      <div>รายละเอียดโครงการ
+      <textarea oninput="auto_grow(this)" name="project_detail" style="font-size: clamp(16px,2.5vw,22px);font-family: 'Kanit', sans-serif;width:100%;resize: none;overflow: hidden;"></textarea>
+          <script type="text/javascript">
+          function auto_grow(element) {
+              element.style.height = "5px";
+              element.style.height = (element.scrollHeight)+"px";
+              this.pos = 0;
+              this.element = element;
+          }
+          </script>
+      </div>
+      <div>
+      <span style="width:20%;">วันที่เริ่มต้นโครงการ : </span><input type="date" name="startDate" value="<%= startDate%>" data-date-format="DD MMMM YYYY" id="datepicker1"><span style="width:20%;margin-left: 10%;">เวลาเริ่มต้นโครงการ : </span><input type="time" name="startTime" value="<%=startTime%>"><br>
+      <span style="width:20%;">วันที่สิ้นสุดโครงการ : </span><input type="date" name="endDate" value="<%= endDate%>" data-date-format="DD MMMM YYYY" id="datepicker2"><span style="width:20%;margin-left: 10%;">เวลาสิ้นสุดโครงการ : </span><input type="time" name="endTime" value="<%=endTime%>"><br>
+      </div>
+      <div>
+          <input type="submit" value="ยืนยัน">
+          <input type="button" value="ยกเลิก">
+      </div>
+  </div>
+  </form>
+  <div id="log"></div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "donation-sci": {
+      "hosting": {
+        "sci-mju-donation": [
+          "donation-sci"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "donation-sci"
+  }
+}

@@ -1,0 +1,47 @@
+<div style="text-align: center;">
+	<h1>แบบฟอร์มแสดงความจำนงร่วมบริจาคทุนการศึกษา คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้</h1>
+</div>
+<form action="AddDonationServlet" name="frm" method="post" id="frm" enctype="multipart/form-data">
+<div style="display: grid;grid-template-columns: 1fr 1fr;padding-left: 1in;padding-right: 1in;">
+    <div>
+        <label>หลักฐานการโอนเงิน</label><br>
+        <img src="img/selectHP.jpg" id="img" style="width:100%;">
+        <input type="file" name="donationIMG" onChange="showIMG()" id="inputIMG"></div>
+    <div style="display: grid;grid-template-columns: 1fr 1fr;">
+        <label><strong>อีเมล</strong></label>
+        <input type="email" name="donator_email">
+        <label><strong>ชื่อ-นามสกุล</strong></label>
+        <input type="text" name="donatorName">
+        <label><strong>หมายเลขโทรศัพท์</strong></label>
+        <input type="text" name="donator_mobileNo">
+        <label><strong>ที่อยู่ใบเสร็จ</strong></label>
+        <input type="text" name="donator_address">
+        <label><strong>ออกใบเสร็จในนาม (ชื่อบุคคล/ชื่อบริษัท)</strong></label>
+        <input type="text" name="donation_name" value="">
+        <label><strong>เลขที่บัตรประชาชน/เลขที่ผู้เสียภาษี</strong></label>
+        <input type="text" name="taxpayerNo" value="">
+        <div>
+            <label><strong>ที่อยู่ในการจัดส่งใบเสร็จ</strong></label><br>
+            <input type="radio" checked name="address_donation" value="รับเองที่ สำนักงานคณบดี คณะวิทยาศาสตร์">รับเองที่ สำนักงานคณบดี คณะวิทยาศาสตร์<br>
+            <input type="radio" name="address_donation" value="ส่งไปรษณีย์ตามที่อยู่ในใบเสร็จ">ส่งไปรษณีย์ตามที่อยู่ในใบเสร็จ<br>
+            <input type="radio" name="address_donation" value="other">Other :<input type="text" name="address_other" disabled>
+        </div>
+        <div>
+            <label><strong>วัตถุประสงค์การโอนเงิน</strong></label><br>
+            <input type="radio" checked name="donation_objective" value="ทุนการศึกษาสำหรับนักศึกษา">ทุนการศึกษาสำหรับนักศึกษา<br>
+            <input type="radio" name="donation_objective" value="ทุนเพื่อทำกิจกรรมของนักศึกษา">ทุนเพื่อทำกิจกรรมของนักศึกษา<br>
+            <input type="radio" name="donation_objective" value="ตามที่คณะวิทยาศาสตร์เห็นสมควร">ตามที่คณะวิทยาศาสตร์เห็นสมควร
+        </div>
+        <label><strong>จำนวนเงิน</strong></label>
+        <input type="text" name="amount" value="">
+        <div>
+            <input type="checkbox" id="myCheckbox">
+            <label><strong>ไม่เปิดเผยข้อมูลส่วนตัว</strong></label>
+        </div><div></div>
+        <div>
+            <input type="hidden" name="show_donation" value="false" id="show_donation">
+            <input type="submit" value="ส่งหลักฐานการโอนเงิน">&nbsp;<input type="button" value="ยกเลิก">
+        </div>
+    </div>
+</div>
+</form>

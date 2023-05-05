@@ -1,0 +1,20 @@
+<div class="container">
+        <div class="shelf" id="<%= pd.getIDtoString()%>">
+            <div><h2 style="color:rgb(255,100,0);margin-top: 0;"><%= project.get(i).getProjectName()%></h2></div>
+            <div>
+                <img src="img/<%= pp.getProject_picture()%>" width="100%">
+            </div>
+            <div style="text-align: right;">
+                <a href="DeleteProjectServlet?projectID=<%=pd.getProjectID()%>&year=<%= String.valueOf(pd.getProjectYear())%>&project_detailID=<%= pd.getProject_DetailID()%>" onclick="return confirm('แน่ใจหรือว่าต้องการลบข้อมูลนี้ ? ');">
+                    <input type="button" value="ลบ" style="width:22%;">
+                </a>
+                <a href="loadEditProject?projectID=<%=pd.getProjectID()%>&year=<%= String.valueOf(pd.getProjectYear())%>&project_detailID=<%= pd.getProject_DetailID()%>">
+                <input type="button" value="แก้ไข" style="width:22%;">
+                </a>
+                <a href="loadListDonation?projectID=<%=pd.getProjectID()%>&year=<%= String.valueOf(pd.getProjectYear())%>&project_detailID=<%= pd.getProject_DetailID()%>">
+                    <input type="button" value="รายการบริจาค" style="width:22%;">
+                </a>
+            </div>
+        </div>
+        <hr>
+</div>

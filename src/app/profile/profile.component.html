@@ -1,0 +1,82 @@
+
+<div style="margin-left: 10vw;margin-right: 10vw;height: 50vh;">
+	<div><h3><strong>การตั้งค่าบัญชีทั่วไป</strong></h3></div>
+	<hr style="border-top: 1px solid #1c1e21;">
+<form action="UpdateDonatorProfileServlet" name="form1" method="post" id="form1" style="position: relative;z-index: -999;">
+	<ul style="list-style-type: none;">
+		<li style="border-bottom: 1px solid #ccc;" id="editName"><a onclick="submitName.style.display ='block';editName.style.display ='none';">
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>ชื่อ</strong>
+				<span><strong>puttipong chomchit</strong></span>
+				<span>
+					<i class="fa fa-edit"></i>
+					<span>แก้ไข</span>
+				</span>
+			</h4>
+			</a>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;display : none;" id="submitName">
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>ชื่อ : </strong>
+				<span><strong><input type="text" value="<%= donator.getDonatorname() %>" name="donator_name"></strong></span>
+				<span>
+					<button type="submit" form="form1">บันทึก<i class="fa fa-edit"></i></button>
+				</span>
+			</h4>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;"><a>
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>ข้อมูลติดต่อ</strong>
+				<span>อีเมลหลัก: <strong>xxx@gmail.com</strong></span>
+				<span>
+					<i class="fa fa-edit"></i>
+					<span>แก้ไข</span>
+				</span>
+			</h4>
+			</a>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;"><a>
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>เลขที่ผู้เสียภาษี/รหัสบัตรประชาชน</strong>
+				<strong>1234567890123</strong>
+				<span>
+					<i class="fa fa-edit"></i>
+					<span>แก้ไข</span>
+				</span>
+			</h4>
+			</a>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;" id="editMobileNo"><a onclick="submitMobileNo.style.display ='block';editMobileNo.style.display ='none';">
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>เบอร์โทรศัพท์</strong>
+				<strong>095-xxx-xxxx</strong>
+				<span>
+					<i class="fa fa-edit"></i>
+					<span>แก้ไข</span>
+				</span>
+			</h4>
+			</a>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;display : none;" id="submitMobileNo">
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;"v>
+                <strong>เบอร์โทรศัพท์ : </strong>
+				<span><strong><input type="text" value="<%= donator.getDonator_mobileno() %>" name="mobileNo"></strong></span>
+				<span>
+					<button type="submit" form="form1">บันทึก<i class="fa fa-edit"></i></button>
+				</span>
+			</h4>
+		</li>
+		<li style="border-bottom: 1px solid #ccc;"><a>
+			<h4 style="display: grid;grid-template-columns: 30% 60% 10%;">
+                <strong>เปลี่ยนรหัสผ่าน</strong>
+				<strong>******</strong>
+				<span>
+					<i class="fa fa-edit"></i>
+					<span>แก้ไข</span>
+				</span>
+			</h4>
+			</a>
+		</li>
+	</ul>
+</form>
+</div>
